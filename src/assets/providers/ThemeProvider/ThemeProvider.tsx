@@ -10,7 +10,7 @@ const ThemeProvider: FC<PropsWith<'children', {}>> = ({ children }) => {
   const classContext = useContext(BodyClassnameContext);
 
   useEffect(() => {
-    classContext.registerClasses('theme', [styles.themes, styles.dark]);
+    // classContext.registerClasses('theme', [styles.themes, styles.dark]);
   }, []);
 
   return <>{children}</>;
