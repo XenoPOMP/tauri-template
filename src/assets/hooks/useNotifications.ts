@@ -24,6 +24,11 @@ interface ITauriNotificationsHook {
  */
 export const useNotifications = (): ITauriNotificationsHook => {
   const send: ITauriNotificationsHook['sendNotification'] = async options => {
+    // Setup default options
+    if (typeof options !== 'string') {
+      options.sound = options.sound ?? 'default';
+    }
+
     let permissionGranted = await isPermissionGranted();
 
     if (!permissionGranted) {
