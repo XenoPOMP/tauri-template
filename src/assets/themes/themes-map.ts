@@ -1,9 +1,9 @@
-import { type CustomTheme, defaultTheme, lightTheme } from '@assets/themes';
-
 import {
   type AppSettings,
   type SystemLike,
 } from '@redux/reducers/appSettingsSlice';
+
+import { type CustomTheme, defaultTheme, lightTheme } from '../themes';
 
 export const themesMap: Record<
   Exclude<AppSettings['theme'], SystemLike>,
